@@ -1,0 +1,24 @@
+
+<div class="scrollable">
+    <div class="scrollable-content section">
+
+      <div class="section">
+        <form action="" id="">
+            <div bs-panel title="">
+                <input bs-form-control type="text" ng-model="search" label="" label-class="col-xs-3 col-sm-2 col-lg-1" class="col-xs-10 col-sm-11 col-lg-12" placeholder="Pequisar" />
+            </div>
+        </form>
+      </div>
+
+      <!-- <div ng-repeat="letra in letras "> -->
+        <div ng-repeat="contato in contatos | orderBy: nome | filter: search">
+          <div class="section">
+            <img src="https://www.cesarsway.com/sites/newcesarsway/files/styles/large_article_preview/public/Dog-bite-prevention.jpg?itok=3N2KTNkP">
+            <h2 class="name">{{contato}}</h2>
+          </div>
+        <!-- </div> -->
+
+      </div>
+
+    </div>
+</div>
