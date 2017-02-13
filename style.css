@@ -1,14 +1,9 @@
 img {
-  width: 20%;
+  width: 10%;
   float: left;
   border-radius: 50%;
 }
 
-.container {
-  display: flex,
-  flexDirection: 'row',
-  justifyContent: 'center',
-  alignItems: 'center',
-  backgroundColor: '#F5FCFF'
-
+h3 {
+  background: #ff444
 }
