@@ -24,14 +24,6 @@
                 <input bs-form-control type="number" class="form-control" ng-model="form.telefone" label="" label-class="col-xs-3 col-sm-2 col-lg-1" class="col-xs-10 col-sm-11 col-lg-6" placeholder="Telefone" />
             </div>
         </form>
-        {{contatos}}
-      </div>
-
-      <div ng-repeat="contato in contatos | orderBy: nome | filter: search">
-        <div class="section">
-          <img src="http://cdn2.hubspot.net/hubfs/1652180/gh.svg">
-          <h2 class="name">{{contato}}</h2>
-        </div>
       </div>
 
     </div>
