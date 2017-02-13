@@ -12,8 +12,11 @@
 
     <!-- Only required for desktop -->
     <link rel="stylesheet" href="/node_modules/mobile-angular-ui/dist/css/mobile-angular-ui-desktop.min.css" />
-
+    <link rel="stylesheet" href="style.css">
     <script src="/node_modules/angular/angular.min.js"></script>
+    <script src="https://cdn.firebase.com/js/client/1.0.18/firebase.js"></script>
+    <script src="https://cdn.firebase.com/libs/angularfire/0.8.0/angularfire.min.js"></script>
+    <script src="https://cdn.firebase.com/js/simple-login/1.6.2/firebase-simple-login.js"></script>
     <script src="/node_modules/angular-route/angular-route.min.js"></script>
     <script src="/node_modules/mobile-angular-ui/dist/js/mobile-angular-ui.min.js"></script>
     <script src="main.js"></script>
@@ -22,6 +25,7 @@
 
     <div class="app">
 
+      <div class="app-body" ng-controller="MainController">
         <div class="navbar navbar-app navbar-absolute-top">
 
             <div class="navbar-brand navbar-brand-center" yield-to="title">
@@ -30,13 +34,27 @@
 
             <div class="btn-group pull-right" yield-to="navbarAction">
                 <div class="btn btn-navbar">
-                    <i class="fa fa-plus"></i>
+                    <a href="/#!/add"><i class="fa fa-plus"></i></a>
+                    <a href="/#!/"><i class="fa fa-check"></i></a>
                 </div>
             </div>
 
         </div>
+<!--
+        <div class="navbar navbar-app navbar-absolute-top">
 
-        <div class="app-body">
+            <div class="navbar-brand navbar-brand-center" yield-to="title">
+                <span>Novo Contato</span>
+            </div>
+
+            <div class="btn-group pull-right" yield-to="navbarAction">
+                <div class="btn btn-navbar">
+                    <a href="/#!/"><i class="fa fa-check"></i></a>
+                </div>
+            </div>
+
+        </div> -->
+
             <ng-view class="app-content"></ng-view>
         </div>
 
