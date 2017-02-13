@@ -1,3 +1,17 @@
+<div class="app-body" ng-controller="MainController">
+  <div class="navbar navbar-app navbar-absolute-top">
+
+      <div class="navbar-brand navbar-brand-center" yield-to="title">
+          <span class="menuTitle">Contatos</span>
+      </div>
+
+      <div class="btn-group pull-right" yield-to="navbarAction">
+          <div class="btn btn-navbar">
+              <a href="/#!/add"><i class="fa-2x fa fa-plus"></i></a>
+          </div>
+      </div>
+
+  </div>
 
 <div class="scrollable">
     <div class="scrollable-content section">
@@ -5,7 +19,7 @@
       <div class="section">
         <form action="" id="">
             <div bs-panel title="">
-                <input bs-form-control type="text" ng-model="search" label="" label-class="col-xs-3 col-sm-2 col-lg-1" class="col-xs-10 col-sm-11 col-lg-12" placeholder="Pequisar" />
+                <input bs-form-control type="pesquisa" class="form-control" type="text" ng-model="search" id="pesquisa" aria-describedby="pesquisa" placeholder="Pesquisa">
             </div>
         </form>
       </div>
@@ -13,12 +27,13 @@
       <!-- <div ng-repeat="letra in letras "> -->
         <div ng-repeat="contato in contatos | orderBy: nome | filter: search">
           <div class="section">
-            <img src="https://www.cesarsway.com/sites/newcesarsway/files/styles/large_article_preview/public/Dog-bite-prevention.jpg?itok=3N2KTNkP">
+            <img src="http://cdn2.hubspot.net/hubfs/1652180/gh.svg">
             <h2 class="name">{{contato}}</h2>
           </div>
-        <!-- </div> -->
+        </div>
+      <!-- </div> -->
 
-      </div>
+      {{}}
 
     </div>
 </div>

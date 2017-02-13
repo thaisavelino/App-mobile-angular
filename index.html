@@ -18,41 +18,23 @@
     <script src="/node_modules/angular-route/angular-route.min.js"></script>
     <script src="/node_modules/mobile-angular-ui/dist/js/mobile-angular-ui.min.js"></script>
     <script src="main.js"></script>
+    <script src="https://cdn.firebase.com/libs/angularfire/0.8.0/angularfire.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/3.6.9/firebase.js"></script>
+    <script>
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyBzL0GY9RZF-vXb7bOH6T8LjML9XdhIQ24",
+      authDomain: "app-gama.firebaseapp.com",
+      databaseURL: "https://app-gama.firebaseio.com",
+      storageBucket: "app-gama.appspot.com",
+      messagingSenderId: "1088815937628"
+    };
+    firebase.initializeApp(config);
+    </script>
   </head>
   <body ng-app="myApp">
 
     <div class="app">
-
-      <div class="app-body" ng-controller="MainController">
-        <div class="navbar navbar-app navbar-absolute-top">
-
-            <div class="navbar-brand navbar-brand-center" yield-to="title">
-                <span>Contatos</span>
-            </div>
-
-            <div class="btn-group pull-right" yield-to="navbarAction">
-                <div class="btn btn-navbar">
-                    <a href="/#!/add"><i class="fa fa-plus"></i></a>
-                    <a href="/#!/"><i class="fa fa-check"></i></a>
-                </div>
-            </div>
-
-        </div>
-<!--
-        <div class="navbar navbar-app navbar-absolute-top">
-
-            <div class="navbar-brand navbar-brand-center" yield-to="title">
-                <span>Novo Contato</span>
-            </div>
-
-            <div class="btn-group pull-right" yield-to="navbarAction">
-                <div class="btn btn-navbar">
-                    <a href="/#!/"><i class="fa fa-check"></i></a>
-                </div>
-            </div>
-
-        </div> -->
-
             <ng-view class="app-content"></ng-view>
         </div>
 

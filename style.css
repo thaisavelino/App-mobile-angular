@@ -1,9 +1,31 @@
 img {
-  width: 10%;
+  width: 20%;
   float: left;
   border-radius: 50%;
 }
 
+.navbar {
+  position: fixed;
+  top: 0;
+}
+
+.section {
+    margin-top: 5%;
+}
+
+.name {
+  margin-top: 20px;
+  margin-left: 20px;
+}
+
 h3 {
-  background: #ff444
+  background: #ff444;
+}
+
+/*.menuTitle {
+  font-size: 30px;
+}*/
+input {
+  margin-top: 3%;
+  width: 80%;
 }

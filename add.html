@@ -1,18 +1,40 @@
+<div class="app-body" ng-controller="MainController">
+  <div class="navbar navbar-app navbar-absolute-top">
+
+      <div class="navbar-brand navbar-brand-center" yield-to="title">
+          <span class="menuTitle">Novo Contato</span>
+      </div>
+
+      <div class="btn-group pull-right" yield-to="navbarAction">
+          <div class="btn btn-navbar">
+              <a href="/#!/" ng-click="add(form).bind(this)"><i class="fa-2x fa fa-check"></i></a>
+          </div>
+      </div>
+
+  </div>
+
 <div class="scrollable">
     <div class="scrollable-content section">
 
-      <div>
+      <div class="section">
         <form action="" id="">
             <div bs-panel title="">
-                <input bs-form-control type="text" ng-model="form.nome" label="" label-class="col-xs-3 col-sm-2 col-lg-1" class="col-xs-10 col-sm-11 col-lg-12" placeholder="Nome" />
-                <input bs-form-control type="text" ng-model="form.email" label="" label-class="col-xs-3 col-sm-2 col-lg-1" class="col-xs-10 col-sm-11 col-lg-12" placeholder="Email" />
-                <input bs-form-control type="text" ng-model="form.telefone" label="" label-class="col-xs-3 col-sm-2 col-lg-1" class="col-xs-10 col-sm-11 col-lg-12" placeholder="Telefone" />
-                <button type="submit" id="btnSignIn" ng-click="add(form)" class="btn btn-primary" data-style="expand-right">
-                    Adicionar
-                </button>
+                <input bs-form-control required type="text" class="form-control" ng-model="form.nome" label="" label-class="col-xs-3 col-sm-2 col-lg-1" class="col-xs-10 col-sm-11 col-lg-6" placeholder="Nome" />
+                <input bs-form-control type="text" class="form-control" ng-model="form.email" label="" label-class="col-xs-3 col-sm-2 col-lg-1" class="col-xs-10 col-sm-11 col-lg-6" placeholder="Email" />
+                <input bs-form-control type="number" class="form-control" ng-model="form.telefone" label="" label-class="col-xs-3 col-sm-2 col-lg-1" class="col-xs-10 col-sm-11 col-lg-6" placeholder="Telefone" />
             </div>
         </form>
+        {{contatos}}
+      </div>
+
+      <div ng-repeat="contato in contatos | orderBy: nome | filter: search">
+        <div class="section">
+          <img src="http://cdn2.hubspot.net/hubfs/1652180/gh.svg">
+          <h2 class="name">{{contato}}</h2>
+        </div>
       </div>
 
     </div>
+
+
 </div>

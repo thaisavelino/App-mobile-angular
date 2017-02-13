@@ -2,6 +2,7 @@
       "ngRoute",
       "mobile-angular-ui",
       "ngStorage",
+      "firebase"
   ]);
 
   app.config(function($routeProvider, $locationProvider) {
@@ -13,15 +14,18 @@
       });
   });
 
-app.controller('MainController', function($scope, $localStorage) {
-  $scope.contatos = ["Ana Bastos", "Ana Maria", "Bianca", "2345meia78"];
-  $localStorage.contatos = $scope.contatos
+app.controller('MainController', function($scope, $localStorage, $firebase) {
+  console.log($localStorage.contatos)
+  $scope.contatos = $localStorage.contatos;
+  // $localStorage.contatos = $scope.contatos
 
-  $scope.letras = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm','n','o','p','q','r','s','t','u','v','x','y','z'];
+  // $letras = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm','n','o','p','q','r','s','t','u','v','x','y','z'];
 
 
   $scope.add = function(form) {
-      $localStorage.contatos.push(form.nome);
-      $scope.contatos = $localStorage.contatos;
+      $scope.contatos.push(form.nome)
+      console.log($scope.contatos)
+
+      // ref.push(form.nome)
   }
 })
