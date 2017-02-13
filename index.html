@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>My App</title>
+
+    <!-- Only required for desktop -->
+    <link rel="stylesheet" href="/node_modules/mobile-angular-ui/dist/css/mobile-angular-ui-hover.min.css" />
+
+    <!-- Always required -->
+    <link rel="stylesheet" href="/node_modules/mobile-angular-ui/dist/css/mobile-angular-ui-base.min.css" />
+
+    <!-- Only required for desktop -->
+    <link rel="stylesheet" href="/node_modules/mobile-angular-ui/dist/css/mobile-angular-ui-desktop.min.css" />
+
+    <script src="/node_modules/angular/angular.min.js"></script>
+    <script src="/node_modules/angular-route/angular-route.min.js"></script>
+    <script src="/node_modules/mobile-angular-ui/dist/js/mobile-angular-ui.min.js"></script>
+    <script src="main.js"></script>
+  </head>
+  <body ng-app="myApp">
+
+    <div class="app">
+
+        <div class="navbar navbar-app navbar-absolute-top">
+
+            <div class="navbar-brand navbar-brand-center" yield-to="title">
+                <span>Contatos</span>
+            </div>
+
+            <div class="btn-group pull-right" yield-to="navbarAction">
+                <div class="btn btn-navbar">
+                    <i class="fa fa-plus"></i>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="app-body">
+            <ng-view class="app-content"></ng-view>
+        </div>
+
+    </div>
+
+
+  </body>
+</html>

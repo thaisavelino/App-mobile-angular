@@ -1,0 +1,25 @@
+{
+  "name": "App-mobile-angular",
+  "version": "1.0.0",
+  "description": "Primeiro app mobile em angular ui",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thaisavelino/App-mobile-angular.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/thaisavelino/App-mobile-angular/issues"
+  },
+  "homepage": "https://github.com/thaisavelino/App-mobile-angular#readme",
+  "dependencies": {
+    "angular": "^1.6.2",
+    "angular-route": "^1.6.2",
+    "mobile-angular-ui": "^1.3.4"
+  }
+}
